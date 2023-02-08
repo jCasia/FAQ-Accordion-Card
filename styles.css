@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors*/
+  --color-ver-dark-saturated-blue: rgb(29, 30, 53);
+  --color-soft-red: rgb(244, 124, 87);
+
+  --color-soft-violet: rgb(175, 103, 233);
+  --color-soft-blue: rgb(101, 101, 231);
+
+  --color-very-dark-grayish-blue: rgb(74, 75, 94);
+
+  --color-dark-grayish-blue: rgb(120, 120, 135);
+
+  --color-light-grayish-blue: rgb(231, 231, 233);
+}
+
+body {
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+
+  background-image: linear-gradient(
+    var(--color-soft-violet),
+    var(--color-soft-blue)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--color-light-grayish-blue);
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  max-width: 60rem;
+  min-height: 32rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+/****************Left Side***************/
+
+.img-container {
+  /* background-color: aqua; */
+
+  align-self: stretch;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.img-box {
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.img-container-inner {
+  /* background-color: red; */
+  overflow: hidden;
+}
+.img {
+  margin-left: -4rem;
+}
+
+/****************Right Side***************/
+
+.faq {
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq__heading {
+  color: var(--color-ver-dark-saturated-blue);
+}
+
+/* .faq__accordion {
+} */
+.faq__accordion-heading {
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.faq__accordion-text {
+  color: var(--color-dark-grayish-blue);
+}
+
+.icon {
+  color: var(--color-soft-red);
+  font-size: 1rem;
+}

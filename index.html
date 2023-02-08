@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <!------- Left Side ---------->
+      <div class="img-container">
+        <!-- inner container -->
+
+        <div class="img-container-inner">
+          <img
+            src="./images/illustration-woman-online-desktop.svg"
+            alt="FAQ image"
+            class="img"
+          />
+        </div>
+
+        <!-- not in inner container so wont apply overflow:hidden -->
+        <img
+          src="./images/illustration-box-desktop.svg"
+          alt="box image"
+          class="img-box"
+        />
+      </div>
+
+      <!------- Right Side ---------->
+      <div class="faq">
+        <h1 class="faq__heading">FAQ</h1>
+        <div class="faq__accordion">
+          <span class="faq__accordion-heading">
+            How many team members can I invite?
+          </span>
+          <i class="fa-solid fa-chevron-down icon"></i>
+          <p class="faq__accordion-text">
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+        </div>
+        <div class="faq__accordion">
+          <span class="faq__accordion-heading">
+            What is the maximum file upload size?
+          </span>
+          <i class="fa-solid fa-chevron-down icon"></i>
+          <p class="faq__accordion-text">
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
+        </div>
+        <div class="faq__accordion">
+          <span class="faq__accordion-heading">
+            How do I reset my password?
+          </span>
+          <i class="fa-solid fa-chevron-down icon"></i>
+          <p class="faq__accordion-text">
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
+        </div>
+        <div class="faq__accordion">
+          <span class="faq__accordion-heading">
+            Can I cancel my subscription?
+          </span>
+          <i class="fa-solid fa-chevron-down icon"></i>
+          <p class="faq__accordion-text">
+            Yes! Send us a message and we'll process your request no questions
+            asked.
+          </p>
+        </div>
+        <div class="faq__accordion">
+          <span class="faq__accordion-heading">
+            Do you provide additional support?
+          </span>
+          <i class="fa-solid fa-chevron-down icon"></i>
+          <p class="faq__accordion-text">
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
