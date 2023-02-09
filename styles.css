@@ -8,7 +8,7 @@
 
 :root {
   /* Colors*/
-  --color-ver-dark-saturated-blue: rgb(29, 30, 53);
+  --color-very-dark-saturated-blue: rgb(29, 30, 53);
   --color-soft-red: rgb(244, 124, 87);
 
   --color-soft-violet: rgb(175, 103, 233);
@@ -38,9 +38,6 @@ body {
 
 .container {
   background-color: var(--color-light-grayish-blue);
-  background-image: url("./images/bg-pattern-desktop.svg");
-  background-repeat: no-repeat;
-  background-size: 50%;
 
   max-width: 60rem;
   min-height: 32rem;
@@ -56,7 +53,9 @@ body {
 /****************Left Side***************/
 
 .img-container {
-  /* background-color: aqua; */
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 68%;
 
   align-self: stretch;
 
@@ -76,7 +75,6 @@ body {
 }
 
 .img-container-inner {
-  /* background-color: red; */
   overflow: hidden;
 }
 .img {
@@ -86,25 +84,49 @@ body {
 /****************Right Side***************/
 
 .faq {
-  padding: 2rem;
+  padding-right: 6rem;
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .faq__heading {
-  color: var(--color-ver-dark-saturated-blue);
+  color: var(--color-very-dark-saturated-blue);
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-/* .faq__accordion {
-} */
+.faq__accordion {
+  overflow: hidden;
+}
+
+.faq__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
 .faq__accordion-heading {
   color: var(--color-very-dark-grayish-blue);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+
+  transition: all 0.2s;
+}
+
+.faq__accordion-heading:hover {
+  color: var(--color-soft-red);
 }
 
 .faq__accordion-text {
   color: var(--color-dark-grayish-blue);
+  line-height: 1.2rem;
+  font-size: 0.77rem;
+  padding-bottom: 0.3rem;
+
+  height: 0;
+  transition: all 0.5s;
+  border-bottom: 1px solid var(--color-dark-grayish-blue);
 }
 
 .icon {
