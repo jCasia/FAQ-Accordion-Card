@@ -10,14 +10,10 @@
   /* Colors*/
   --color-very-dark-saturated-blue: rgb(29, 30, 53);
   --color-soft-red: rgb(244, 124, 87);
-
   --color-soft-violet: rgb(175, 103, 233);
   --color-soft-blue: rgb(101, 101, 231);
-
   --color-very-dark-grayish-blue: rgb(74, 75, 94);
-
   --color-dark-grayish-blue: rgb(120, 120, 135);
-
   --color-light-grayish-blue: rgb(231, 231, 233);
 }
 
@@ -64,6 +60,7 @@ body {
   align-items: center;
 
   position: relative;
+  width: 100%;
 }
 
 .img-box {
@@ -72,19 +69,25 @@ body {
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
+
+  min-width: 50%;
 }
 
 .img-container-inner {
   overflow: hidden;
+  width: 100%;
 }
 .img {
   margin-left: -4rem;
+  max-width: 100%;
+  min-width: 23rem;
 }
 
 /****************Right Side***************/
 
 .faq {
   padding-right: 6rem;
+  min-width: 23rem;
 
   display: flex;
   flex-direction: column;
@@ -122,7 +125,6 @@ body {
   color: var(--color-dark-grayish-blue);
   line-height: 1.2rem;
   font-size: 0.77rem;
-  padding-bottom: 0.3rem;
 
   height: 0;
   transition: all 0.5s;
@@ -132,4 +134,111 @@ body {
 .icon {
   color: var(--color-soft-red);
   font-size: 1rem;
+}
+
+/**********Media Queries***************/
+
+@media only screen and (max-width: 67.2em) {
+  .container {
+    margin: 0 5rem;
+    gap: 1rem;
+  }
+
+  .faq {
+    padding-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    margin: 0 2rem;
+
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .img-container-inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .img {
+    margin-left: 0;
+  }
+
+  .img-box {
+    position: absolute;
+
+    top: 10%;
+    left: -7%;
+    transform: translate(0, 0);
+  }
+
+  /* BOTTOM */
+  .faq {
+    padding: 2rem 4rem 5rem 4rem;
+  }
+
+  .faq__heading {
+    font-size: 2.5rem;
+    align-self: center;
+  }
+
+  .faq__accordion-heading {
+    font-size: 1.2rem;
+  }
+
+  .faq__accordion-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .img-container {
+    background-image: url("./images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+  }
+
+  .img-container-inner {
+    overflow: visible;
+  }
+
+  .img {
+    transform: translateY(-6rem);
+    max-width: 75%;
+    min-width: 14rem;
+  }
+
+  .faq {
+    padding: 0rem 2rem 4rem 2rem;
+    min-width: 10rem;
+    margin-top: -3rem;
+  }
+
+  .img-box {
+    display: none;
+  }
+
+  .faq__accordion-heading {
+    font-size: 1rem;
+  }
+
+  .faq__accordion-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .faq__heading {
+    font-size: 1.75rem;
+  }
+
+  .faq__accordion-heading {
+    font-size: 0.9rem;
+  }
+
+  .faq__accordion-text {
+    font-size: 0.75rem;
+  }
 }
