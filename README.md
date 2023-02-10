@@ -18,5 +18,5 @@ The challenge I had in coding this project was probably trying to make it respon
 
 ### Here is some screenshots of this project
 
-![](./images/faqDesktop.png)
-![](./images/faqMobile.png)
+![](./images/FaqDesktop.png)
+![](./images/FaqMobile.png)
